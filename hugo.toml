@@ -1,0 +1,26 @@
+baseURL = "https://go-ruby-rspec.github.io/"
+title = "go-ruby-rspec"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[params.phases]]
+  name = "Pure Go, zero cgo"
+  status = "ready"
+  blurb = "`rspec` builds with `CGO_ENABLED=0` — it cross-compiles to every Go target with no C toolchain and links into a single static binary."
+
+[[params.phases]]
+  name = "Reference-faithful"
+  status = "ready"
+  blurb = "Mirrors the observable behaviour of Ruby's `rspec` from reference Ruby (MRI), validated by a differential oracle against the reference rather than approximated — **without any Ruby runtime**."
+
+[[params.phases]]
+  name = "Standalone & reusable"
+  status = "ready"
+  blurb = "A standalone Go module any program can import; the OAuth-style dependency runs the other way — `rbgo` binds it into [go-embedded-ruby](https://github.com/go-embedded-ruby/ruby) as a native module, the same pattern as go-ruby-yaml."
+
+[[params.phases]]
+  name = "100% coverage · 6 arches"
+  status = "ready"
+  blurb = "100% test coverage is the CI gate, `gofmt` + `go vet` clean, green across the six 64-bit Go targets (amd64, arm64, riscv64, loong64, ppc64le, s390x — including the big-endian lane)."
